@@ -25,7 +25,7 @@ class Player{
 
 class Dice{
     public:
-    void roll(){
+    int roll(){
         int v = (rand()%6)+1;
         return v;
     }
@@ -74,7 +74,7 @@ class DiceGame{
         }
 
         for(int i = 0; i < list.size(); i++){
-            cout << "player"<< (i+1)<<" "<<list[i].getname[]<<" score is "<<list[i].getWins[]<<endl;
+            cout << "player"<< (i+1)<<" "<<list[i].getName()<<" score is "<<list[i].getWins()<<endl;
 
         }
     }
@@ -83,6 +83,7 @@ class DiceGame{
 int main(){
     cout << "Hey! Welcome to the Dice  Console game."<<endl;
 
+    srand(time(0));
     DiceGame dc;
     while(1){
         cout << "*** Game Menu ***" << endl;
